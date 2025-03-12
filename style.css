@@ -37,6 +37,7 @@ header ul{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-size: clamp(1rem, 0.286rem + 1.905vw, 2rem);
 
 }
 
