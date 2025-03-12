@@ -1,0 +1,142 @@
+/* mobile first 576px */
+:root {
+    --banner-bg-color: #000;
+    --link-bg-color: #669999;
+    --banner-font-clr: #FFFFFF;
+    --border-rad: 10px;
+}
+
+body {
+    margin: 0 auto;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header{
+    background-image:url("https://wallpapercave.com/wp/wp10467049.jpg");
+    background-size: contain;                 /* Ensure the whole image is visible */
+    background-position: center;              /* Center the image */
+    background-repeat: no-repeat;             /* Prevent image from repeating */
+    height: 400px;                            /* Adjust the height of the header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+footer {
+    background-color: var(--banner-bg-color);
+    padding: 2%;
+}
+
+h1 {
+    color: var(--banner-font-clr);
+    font-size: clamp(4rem, 1.204rem + 7.767vw, 8rem);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* auf gesammte fläche bezogen bei list item nur schrift */
+li a {
+    color: var(--banner-font-clr);
+    font-size: clamp(2rem, 1.301rem + 1.942vw, 3rem);
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--link-bg-color);
+    width: 80%;
+    display: inline-block; /* soll sich wie blockelement verhalten */
+    padding: 1%;
+    margin: 3% 10%;
+    border-radius: var(--border-rad);
+}
+
+main{
+    margin: 0 auto;
+    width: 80%;
+}
+
+article {
+    margin-bottom: 10%;
+}
+
+article img {
+    width: 100%;
+}
+
+
+section h3 {
+    font-size: clamp(1.5rem, 0.451rem + 2.913vw, 3rem);
+    margin: 0;
+}
+
+section p {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+table {
+    font-size: clamp(1rem, 0.286rem + 1.905vw, 2rem);
+    margin: 20px auto;
+    width: 80%;
+    height: 80%;
+    background-color: var(--link-bg-color);
+    border-radius: var(--border-rad);
+}
+table, td {
+    border: 2px solid #FFF;
+}
+
+
+.pictures {
+    display: flex;
+    flex-direction: row warp;
+
+}
+.pictures img {
+    padding: 2%;
+    width: 30%;
+}
+
+form{
+    display: flex;
+    flex-fow: column;
+    gap: 5px;
+    padding: 5%;
+}
+
+@media screen and (min-width: 1400px){
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    li {
+        width: 900px
+    }
+
+    article {
+        display: flex;
+        align-items: center;
+        /* gab zwischen zwei flex */
+        gap: 2%;
+
+    }
+
+    section {
+        max-width: 60%;
+
+    }
+
+}
+
+.reverse{
+    flex-direction: row-reverse;
+}
