@@ -1,19 +1,25 @@
 :root {
-    --color-text: #FFF;
+    --color-text: #DDD;
 
 }
+
+* {
+    box-sizing: border-box;
+}
+
 body{
     background-color: black;
+    margin: 0 auto;
+    text-align: center;
 }
 header {
     background-image:url("https://wallpapercave.com/wp/wp10467049.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    height: 800px;
+    width: 100%;
+    height: auto;
     display:flex;
     flex-direction: column;
-
-
 
 
 }
@@ -44,8 +50,65 @@ header ul{
 header a{
     color: var(--color-text);
 
+}
+
+
+
+main{
+    color: var(--color-text);
+    margin: 0 auto;
+    width: 80%;
+}
+
+article {
+    display: flex;
+    margin-bottom: 10%;
+}
+
+article img {
+    width: 50%;
+}
+
+
+#upbutton {
+    position: fixed;
+    bottom: -4px;
+    left: 10px;
 
 }
+#upbutton button {
+    background-color: transparent;
+}
+
+
+#upbutton img {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+}
+#arrow{
+    background-color: #FFF;
+}
+
+footer {
+    background-color: #202020;
+    padding: 4%;
+}
+
+footer ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: clamp(1rem, 0.286rem + 1.905vw, 2rem);
+
+}
+
+footer a{
+    color: var(--color-text);
+}
+
 @media (max-width: 768px) {
     header {
         height: 400px;  /* Adjust the height for smaller screens */
