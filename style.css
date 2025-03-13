@@ -9,13 +9,10 @@
 html {
     scroll-behavior: smooth;
 }
-* {
-    box-sizing: border-box;
-}
+
 
 body{
     background-color: black;
-    margin: 0 auto;
     text-align: center;
 }
 header {
@@ -67,6 +64,7 @@ header li:hover{
 
 header a{
     color: var(--color-text);
+    text-decoration: none;
 
 }
 
@@ -85,9 +83,30 @@ main{
     display: flex;
     flex-direction: column;
     background-color: var(--color-column);
-    width: 50%;
+    width: 70%;
 }
 
+.column h2{
+    margin-top: 20%;
+}
+.column li{
+    display: flex;
+    list-style-type: none;
+    align-items: flex-start;
+}
+
+.column a{
+    text-decoration: none;
+    font-size: clamp(1rem, 0.857rem + 0.381vw, 1.2rem);
+    color: var(--color-text);
+    margin: 10%;
+
+
+}
+
+.maincontent{
+    margin: 10%;
+}
 article {
     display: flex;
     margin-bottom: 10%;
