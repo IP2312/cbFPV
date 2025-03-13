@@ -69,10 +69,14 @@ article img {
     width: 50%;
 }
 
+.reverse{
+    flex-direction: row-reverse;
+}
+
 
 #upbutton {
     position: fixed;
-    bottom: -4px;
+    bottom: 10px;
     left: 10px;
 
 }
