@@ -1,27 +1,34 @@
 :root {
     --color-text: #FFF;
-    --color-hover: rgba(255,255,255, 0.6);
+    --color-hover: rgba(255, 255, 255, 0.6);
     --color-background: #000;
-    --color-column: #CCC;
+    --color-column: #6c1d2a;
+    --color-pbackground: #6c1d2a;
 
 
 }
+
 html {
     scroll-behavior: smooth;
 }
 
-
-body{
-    background-color: black;
-    text-align: center;
+* {
+    box-sizing: border-box;
 }
+
+body {
+    background-color: var(--color-background);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
 header {
-    background-image:url("https://wallpapercave.com/wp/wp10467049.jpg");
+    background-image: url("https://wallpapercave.com/wp/wp10467049.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: auto;
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 
@@ -42,7 +49,7 @@ header h2 {
 }
 
 
-header ul{
+header ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -52,26 +59,26 @@ header ul{
 
 }
 
-header li{
+header li {
     padding: 5px 20px 5px 20px;
     border-radius: 10px;
 
 }
-header li:hover{
-    background-color:var(--color-hover);
+
+header li:hover {
+    background-color: var(--color-hover);
 
 }
 
-header a{
+header a {
     color: var(--color-text);
     text-decoration: none;
 
 }
 
 
-
-main{
-    display:flex;
+main {
+    display: flex;
 
     color: var(--color-text);
     margin: 0 auto;
@@ -84,18 +91,20 @@ main{
     flex-direction: column;
     background-color: var(--color-column);
     width: 70%;
+    margin: 0;
 }
 
-.column h2{
+.column h2 {
     margin-top: 20%;
 }
-.column li{
+
+.column li {
     display: flex;
     list-style-type: none;
     align-items: flex-start;
 }
 
-.column a{
+.column a {
     text-decoration: none;
     font-size: clamp(1rem, 0.857rem + 0.381vw, 1.2rem);
     color: var(--color-text);
@@ -104,32 +113,45 @@ main{
 
 }
 
-.maincontent{
-    margin: 10%;
+.maincontent {
+    margin: 5%;
 }
+
 article {
     display: flex;
     margin-bottom: 10%;
+    background-color: var(--color-pbackground);
 }
 
 p {
-    text-align: justify;
-    margin: 2%
+    margin: 2%;
+    background-color: var(--color-pbackground);
+    width: 90%;
+    font-size: clamp(0.8rem, 0.443rem + 0.952vw, 1.3rem);
+
+}
+
+#flowstate p {
+    width: 95%;
 }
 
 #imgFlowstate {
     width: 50%;
     border-radius: 10px;
 }
-#imgFlowstate:hover{
-    background-color: #202020;
+
+#imgFlowstate:hover {
+    background-color: #000;
 }
 
-article img{
+article img {
+    width: 50%;
+}
+article video {
     width: 100%;
 }
 
-.reverse{
+.reverse {
     flex-direction: row-reverse;
 }
 
@@ -140,6 +162,7 @@ article img{
     right: 10px;
 
 }
+
 #upbutton button {
     background-color: transparent;
 }
@@ -151,7 +174,8 @@ article img{
     display: flex;
     flex-direction: column;
 }
-#arrow{
+
+#arrow {
     background-color: var(--color-text);
 }
 
@@ -160,8 +184,7 @@ footer {
 }
 
 
-
-footer ul{
+footer ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -176,13 +199,44 @@ footer ul{
 }
 
 
-footer a{
+footer a {
     color: var(--color-text);
 }
 
-@media (max-width: 768px) {
-    header {
-        height: 400px;  /* Adjust the height for smaller screens */
-        justify-content: flex-start;
+@media screen and (max-width: 800px) {
+    article{
+        display: flex;
+        flex-wrap: wrap;
     }
+    article img {
+        width: 100%;
+    }
+
 }
+
+
+/*@media screen and (min-width: 1400px){*/
+/*    ul {*/
+/*        display: flex;*/
+/*        justify-content: space-evenly;*/
+
+/*    }*/
+
+/*    li {*/
+/*        width: 900px*/
+/*    }*/
+
+/*    article {*/
+/*        display: flex;*/
+/*        align-items: center;*/
+/*        !* gab zwischen zwei flex *!*/
+/*        gap: 2%;*/
+
+/*    }*/
+
+/*    section {*/
+/*        max-width: 60%;*/
+
+/*    }*/
+
+/*}*/
