@@ -91,7 +91,7 @@ main {
     flex-direction: column;
     background-color: var(--color-column);
     width: 70%;
-    margin: 0;
+    margin-top: 2%;
 }
 
 .column h2 {
